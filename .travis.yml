@@ -1,0 +1,11 @@
+# travis.yml for github.com/hamzakhanvit/dga
+
+language: python
+
+python:
+  - 3.6
+
+# Install python packages
+install:
+  - pip install gfapy
+   
