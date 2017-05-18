@@ -5,6 +5,7 @@ setup(name='dga',
       description='Diploid genome assembler',
       author='Hamza Khan',
       author_email='hamza.khan@alumni.ubc.ca',
-      packages=['src'],
+      packages=['dga'],
+      package_dir={'dga': 'src'},
       long_description=open('README.md').read(),
      )
