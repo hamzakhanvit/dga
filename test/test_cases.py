@@ -1,6 +1,7 @@
-from dga import gfa_parser
+import dga, pkg_resources
 
 def test_gfa_parser():
-     inputfile = '/.mounts/labs/simpsonlab/users/h2khan/projects/proj1-diploid-assembly/canu-runs/yeast/sk1/sk1-auto/test.contigs.gfa'
-     f = gfa_parser(inputfile)
-     assert f.read_gfa_file() == 1
+     inputfile =  pkg_resources.resource_filename('dga', 'data/test-contigs-gfa')
+     f = dga.gfa_parser(inputfile)   
+     success = f.read_gfa_file() 
+     assert success == 1

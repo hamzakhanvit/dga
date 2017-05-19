@@ -1,5 +1,7 @@
-from parse_gfa import gfa_parser
+#!/usr/bin/env python
 
+import sys
+import dga
 import sys,getopt,      \
 csv,time         
 
@@ -21,8 +23,6 @@ __doc__ = "\n***********************************************\
 __version__,
 __description__,
 epi)
-
-
 
 
 def usage():
@@ -70,13 +70,13 @@ def main(argv):
    
    #Variable to record time 
    start_time = time.time() 
-    
-   f = gfa_parser(inputfile)   
+
+
+   f = dga.gfa_parser(inputfile)   
    success = f.read_gfa_file()  
     
    if(success):
        print ('Done! Time elapsed: %.4f seconds' % (time.time() - start_time))
-
 
 
 if __name__ == "__main__":
